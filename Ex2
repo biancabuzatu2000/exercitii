@@ -47,13 +47,13 @@ int main()
 {
 
     Machiaj m1(" Set rujuri mate",15,"      CHANEL",120);
-    Machiaj m2("  Creion de ochi",30,"     L’OREAL",30);
+    Machiaj m2("  Creion de ochi",30,"     Lâ€™OREAL",30);
     Machiaj m3("      Iluminator", 9,"     CLARINS",50);
     Machiaj m4("         Mascara",50,"ESTEE LAUDER",60);
     Machiaj m5("           Gloss",18,"  MAYBELLINE",8);
     Machiaj m6("Creion-sprancene",17,"      CHANEL",13);
     Machiaj m7("   Gel-sprancene",29,"         MAC",32);
-    Machiaj m8("          Primer",37,"     L’OREAL",12);
+    Machiaj m8("          Primer",37,"     Lâ€™OREAL",12);
     Machiaj m9("           Blush",29,"ESTEE LAUDER",50);
     Machiaj m10(" Creion de buze",60,"     LANCOME",20);
 
