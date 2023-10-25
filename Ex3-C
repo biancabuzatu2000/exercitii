@@ -10,7 +10,8 @@
 
         c)Media pe clasa
         
-        d)Listarea elevilor in ordine descrescatoare a mediilor*/
+        d)Listarea elevilor in ordine descrescatoare a mediilor
+*/
 
 
  struct Elev {
