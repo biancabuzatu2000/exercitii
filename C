@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <string.h>
+/*Probleme :
+
+    Sa se completeze pentru n(n<=100) elevi ai unei clase datele : nume, prenume, media generala, absente nemotivate. Sa se afiseze:
+
+        elevii care au media peste 8.
+
+        Elevii care au peste 30 de absente nemotivate
+
+        Media pe clasa*/
+
+
+ struct Elev {
+ char nume[30];
+ char prenume[30];
+ float medie_generala;
+ int absente;
+ };
+
+struct Elev v[100];
+
+void numarabsentenumotivate(struct Elev v[100],int n)
+{
+    for(int i=0;i<=n-1;i++)
+    {
+        if(v[i].absente>30)
+            printf("Numele elev : %s %s\n",v[i].nume,v[i].prenume);
+    }
+}
+
+
+void mediepesteopt(struct Elev v[100],int n )
+{
+    for(int i=0;i<=n-1;i++)
+    {
+        if(v[i].medie_generala>8)
+            printf("Nume elev : %s %s\n", v[i].nume,v[i].prenume);
+    }
+
+}
+float mediegenerala(struct Elev v[100],int n)
+{
+   float s=0;
+    for(int i=0;i<=n;i++)
+    {
+        s=s+v[i].medie_generala;
+    }
+    return s/n;
+}
+
+int main()
+{
+   int n;
+   printf("Numarul elevilor adaugati: ");
+   scanf("%d",&n);
+   for(int i=0;i<=n-1;i++)
+   {
+       printf("Numele elevului");
+       scanf("%s",v[i].nume);
+       printf("Prenumele elevului");
+       scanf("%s",v[i].prenume);
+       printf("Media generala este: ");
+       scanf("%f",&v[i].medie_generala);
+       printf("Numar absente");
+       scanf("%d",&v[i].absente);
+       fflush(stdin);
+   }
+   printf("Numele elevilor cu media peste 8\n");
+   mediepesteopt(v,n);
+    printf("Numele elevilor cu peste 30 absente nemotivate\n");
+   numarabsentenumotivate(v,n);
+   printf("Media generala pe clasa este : ");
+   printf("%2.2f",mediegenerala(v,n));
+
+
+
+    return 0;
+}
