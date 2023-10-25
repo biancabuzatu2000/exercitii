@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-/*Probleme :
+/*Problema 1:
 
     Sa se completeze pentru n(n<=100) elevi ai unei clase datele : nume, prenume, media generala, absente nemotivate. Sa se afiseze:
 
