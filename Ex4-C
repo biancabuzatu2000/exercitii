@@ -96,14 +96,14 @@ afisare(a,n);
 printf("\n");
 scanf("%d",&x);
 if(cautare_binara(a,n,x)==0)
-    printf("Valoarea nu se afla in tablou");
+    printf("Valoarea nu exista in tablou");
     else
-        printf("Valoarea se afla in tablou");
+        printf("Valoarea exista in tablou");
 
 printf("\n");
-printf("Dati prima valoare: ");
+printf("Prima valoare: ");
 scanf("%d",&i);
-printf("Dati prima valoare: ");
+printf("A doua valoare: ");
 scanf("%d",&j);
 interschimbare(a,n,i,j);
 afisare(a,n);
