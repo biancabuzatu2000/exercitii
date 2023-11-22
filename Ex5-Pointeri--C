@@ -123,5 +123,6 @@ inversare(a,n);
 afisare(a,n);
 printf("\n");
 printf("Suma numerelor pare este : %d",numere_pare(a,n));
+free(a);
     return 0;
 }
