@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #define N 80
+
 //1.citire unui tablou cu pointeri
 //2.afisare unui tablou cu pointeri
 //3.ordonarea crescatoare a unui tablou cu pointeri-bubble sort
