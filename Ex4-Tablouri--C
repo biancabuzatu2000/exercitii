@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #define N 80
+
+Problema 2 : 
 //1.citire tablou
 //2.afisare tablou
 //3.ordonare crescatoare -bubble sort
