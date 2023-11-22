@@ -7,6 +7,8 @@
 //4.cautare binara a unui numar in tablou
 //5.interschimbarea a doua valori dintr-un tablou
 //6.inversarea tabloului
+//7.cautarea numerelor pare dintr-un tablou si suma lor
+
 void citire(int a[N],int n)
 {
     for(int i=0;i<n;i++)
@@ -79,6 +81,16 @@ void inversare(int a[N],int n)
         j--;
     }
 }
+int numere_pare(int a[],int n)
+{
+   int s=0;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]%2==0)
+            s=s+a[i];
+    }
+    return s;
+}
 
 
 
@@ -94,6 +106,7 @@ printf("\n");
 ordonare(a,n);
 afisare(a,n);
 printf("\n");
+printf("Valoarea cautata: ");
 scanf("%d",&x);
 if(cautare_binara(a,n,x)==0)
     printf("Valoarea nu exista in tablou");
@@ -101,9 +114,9 @@ if(cautare_binara(a,n,x)==0)
         printf("Valoarea exista in tablou");
 
 printf("\n");
-printf("Prima valoare: ");
+printf("Pozitia primei valoare : ");
 scanf("%d",&i);
-printf("A doua valoare: ");
+printf("Pozitia valorii 2 : ");
 scanf("%d",&j);
 interschimbare(a,n,i,j);
 afisare(a,n);
@@ -111,7 +124,8 @@ printf("\n");
 printf("Matricea inversata este: ");
 inversare(a,n);
 afisare(a,n);
-
+printf("\n");
+printf("Suma numerelor pare este : %d",numere_pare(a,n));
 
     return 0;
 }
