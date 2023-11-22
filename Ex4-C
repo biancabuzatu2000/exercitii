@@ -1,0 +1,117 @@
+#include <stdio.h>
+#include <string.h>
+#define N 80
+//1.citire tablou
+//2.afisare tablou
+//3.ordonare crescatoare -bubble sort
+//4.cautare binara a unui numar in tablou
+//5.interschimbarea a doua valori dintr-un tablou
+//6.inversarea tabloului
+void citire(int a[N],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        {
+            scanf("%d",&a[i]);
+        }
+    }
+}
+
+void afisare(int a[N],int n)
+{
+ for(int i=0;i<n;i++){
+    {
+        printf("%d",a[i]);
+
+    }
+ }
+}
+
+void ordonare(int a[N],int n)
+{
+    for(int i=0;i<=n-2;i++)
+    {
+        for(int j=i+1;j<=n-1;j++)
+        {
+            if(a[i]>a[j])
+            {
+                int temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+}
+int cautare_binara(int a[N],int n,int x)
+{
+    int i=0;
+    int j=n-1;
+    while(i<=j)
+    {
+        int m=(i+j)/2;
+        if(x==a[m])
+            return 1;
+        else if(x<a[m])
+            j=m-1;
+        else
+            i=m+1;
+    }
+    if(i>j)
+        return 0;
+}
+
+void interschimbare(int a[N],int n,int i ,int j )
+{
+int temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+
+void inversare(int a[N],int n)
+{
+    int i=0;
+    int j=n-1;
+    while(i<=j){
+        int temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+        i++;
+        j--;
+    }
+}
+
+
+
+
+int main() {
+int n,x,i,j;
+int a[N];
+printf("n=");
+scanf("%d",&n);
+citire(a,n);
+afisare(a,n);
+printf("\n");
+ordonare(a,n);
+afisare(a,n);
+printf("\n");
+scanf("%d",&x);
+if(cautare_binara(a,n,x)==0)
+    printf("Valoarea nu se afla in tablou");
+    else
+        printf("Valoarea se afla in tablou");
+
+printf("\n");
+printf("Dati prima valoare: ");
+scanf("%d",&i);
+printf("Dati prima valoare: ");
+scanf("%d",&j);
+interschimbare(a,n,i,j);
+afisare(a,n);
+printf("\n");
+printf("Matricea inversata este: ");
+inversare(a,n);
+afisare(a,n);
+
+
+    return 0;
+}
