@@ -116,7 +116,7 @@ if(cautare_binara(a,n,x)==0)
         printf("Valoarea exista in tablou");
 
 printf("\n");
-printf("Pozitia primei valoare : ");
+printf("Pozitia primei valori : ");
 scanf("%d",&i);
 printf("Pozitia valorii 2 : ");
 scanf("%d",&j);
