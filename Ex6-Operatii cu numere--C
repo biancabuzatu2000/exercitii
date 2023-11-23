@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int numar_cifre_pare(int n)
+{
+   int nr=0;
+   while(n!=0)
+   {
+       if((n%10)%2==0) nr=nr+1;
+       n=n/10;
+
+   }
+   return nr;
+}
+int cea_mai_mare_cifra(int n)
+{
+    int max=n%10;
+    while(n!=0)
+    {
+        if(max<n/10%10)
+            max=n/10%10;
+        n=n/10;
+    }
+    return max;
+}
+
+float medie_aritmetica(int n)
+{
+    int nr=0;
+    int s=0;
+    while(n!=0)
+    {
+     s=s+n%10;
+     nr=nr+1;
+     n=n/10;
+    }
+    return (float)s/nr;
+}
+int nr_divizori(int n)
+{
+    int i=1;
+    int nr=0;
+    while(i<=n)
+    {
+        if(n%i==0)
+            nr=nr+1;
+            i=i+1;
+    }
+    return nr;
+
+}
+int invers(int n)
+{
+    int c;
+    int copie=n;
+    int inv=0;
+    while(n!=0)
+    {
+        c=n%10;
+        inv=inv*10+c;
+        n=n/10;
+
+    }
+    if(inv==copie)
+    return 1;
+    else return 0;
+}
+int main()
+{
+   int n;
+   printf("n=");
+   scanf("%d",&n);
+   printf("Numarul cifrelor pare este :%d",numar_cifre_pare(n));
+   printf("\n");
+   printf("Cea mai mare cifra din numar este  :%d",cea_mai_mare_cifra (n));
+   printf("\n");
+   printf("Media aritmetica a numerelor din n este : %2.2f",medie_aritmetica(n));
+   printf("\n");
+   printf("Nr divizorilor este : %d",nr_divizori(n));
+   printf("\n");
+   if(nr_divizori(n)==2)
+    printf("Numarul este prim ");
+   else
+    printf("Nr nu este prim ");
+    printf("\n");
+    if(nr_divizori(n)%2!=0)
+        printf("Numarul este patrat perfect");
+    else
+        printf("Numarul nu este patrat perfect");
+if(invers(n)==1)
+    printf("Numarul este palindrom");
+else
+    printf("Numarul nu este palindrom");
+    return 0;
+}
