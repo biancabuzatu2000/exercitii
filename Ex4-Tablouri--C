@@ -131,3 +131,98 @@ printf("Suma numerelor pare este : %d",numere_pare(a,n));
 
     return 0;
 }
+
+
+
+
+
+Problema 2.1 
+Siruri de caracter 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void citire(char a[])
+{
+  printf("Dati sirul ");
+  gets(a);
+}
+
+void afisare(char a[])
+{
+    printf("Sirul este %s\n",a);
+
+}
+
+int main()
+{
+   char a[30];
+    char b[30];
+
+   citire(a);
+   afisare(a);
+   citire(b);
+   afisare(b);
+
+  if(strlen(a)==strlen(b)) //din punct de vedere al lungimii
+    printf("Sirurile sunt egale");
+   else
+    if(strlen(a)>strlen(b))
+    printf("a este mai mare decat b");
+   else
+    printf("b este mai mare decat a");
+    printf("\n");
+
+if(strcmp(a,b)==0)
+    printf("Cele doua sunt identice");
+else if(strcmp(a,b)<0)
+printf("b este mai mare decat a ");
+else printf("a este mai mare decat b");
+printf("\n");
+
+char c;
+printf("Dati valoarea caracterului:");
+scanf("%c",&c);
+if(strchr(a,c)!=NULL)//cauta un caracter in sir si intoarce subsirul care incepe cu acel caracter
+    printf("Caracterul exista pe pozitia : %d si subsirul este : %s",strchr(a,c)-a,strchr(a,c));
+else
+    printf("Caracterul nu exista");
+    printf("\n");
+ printf("\n");
+
+if(strstr(a,b)!=NULL)
+
+    printf("Sirul b apare in sirul a, pe pozitia %d si subsirul este %s",strstr(a,b)-a,strstr(a,b));
+    else
+        printf("Sirul nu apare");
+printf("\n");
+
+char d[30];
+strcpy(d,a);
+printf("Sirul d este %s\n",d);
+strcat(d," ");
+strcat(d,b);
+printf("Sirul d este %s\n",d);
+printf("\n");
+
+char s[30];
+printf("Dati cuvantul :");
+scanf("%s",s);
+fflush(stdin);
+
+char e;
+printf("Dati caracterul");
+scanf("%c",&e);
+
+if(strchr(s,e)!=NULL)
+{
+    int poz=strchr(s,e)-s;
+    strcpy(s+poz,s+poz+1);
+    printf("Sirul rezultat este: %s",s);
+
+}
+else
+printf("Nu exista caracterul.");
+    return 0;
+}
