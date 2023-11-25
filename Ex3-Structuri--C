@@ -84,7 +84,7 @@ void afisare_elevi(struct Elev v[100],int n)
 {
     for(int i=0;i<=n-1;i++)
         printf("Numele %s Prenumele %s Media %2.2f Numar absente %d \n",v[i].nume,v[i].prenume,v[i].medie_generala,v[i].absente);
-    printf("\n"); // scuze
+    printf("\n");
 }
 
 
